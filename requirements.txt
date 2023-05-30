@@ -2,8 +2,6 @@ numba
 progress
 matplotlib
 scipy>=1.4.1
-torch==1.1.0
-torchvision==0.3.0
 albumentations
 pyrr
 simplejson
@@ -16,3 +14,9 @@ setuptools>=49.6.0
 frozendict
 tensorflow
 requests
+python demo.py --demo /Users/tangwenwu/Documents/GitHub/CenterPose/images/CenterPose/chair/00007.png --arch dlav1_34 --load_model /Users/tangwenwu/Documents/GitHub/CenterPose/models/chair_v1_140.pth
+git submodule set-url https://github.com/jinfagang/DCNv2_latest.git src/lib/models/networks/DCNv2
+git submodule sync
+git submodule update --init --recursive --remote
+cd $CenterPose_ROOT/src/lib/models/networks/DCNv2
+./make.sh
